@@ -1,3 +1,5 @@
+const promise = new Promise()
+
 function get(URL, callback) {
   const xhr= new XMLHttpRequest();
 
