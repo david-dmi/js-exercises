@@ -1,8 +1,6 @@
-const promise = new Promise()
-
 function get(URL, callback) {
   const xhr= new XMLHttpRequest();
-
+  
   xhr.onreadystatechange = function () {
     const DONE = 4
     const OK = 200
