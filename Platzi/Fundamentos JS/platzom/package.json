@@ -1,0 +1,21 @@
+{
+  "name": "platzom",
+  "version": "0.1.0",
+  "description": "Traductor de idioma platzom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/david-dmi/js-exercises/tree/master/Platzi/Fundamentos%20JS/platzom"
+  },
+  "keywords": [
+    "platzom",
+    "platzi",
+    "fundamentos",
+    "js"
+  ],
+  "author": "David Portilla Saldana <david_portilla@hotmail.com> (http://davinteractivo.com/)",
+  "license": "MIT"
+}
