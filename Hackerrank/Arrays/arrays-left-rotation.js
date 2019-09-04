@@ -40,5 +40,5 @@ function rotRight(arr, r ) {
 }
 
 
-rotLeft(data, rotations)
-// rotRight(data, rotations)
+// rotLeft(data, rotations)
+rotRight(data, rotations)
