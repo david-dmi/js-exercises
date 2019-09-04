@@ -1,5 +1,5 @@
 /*
-Arrays: Rotation
+Arrays: Left Rotation
 
 Given an array 'data' of 'n' integers and a number, 'rotations', perform 'rotations' left rotations on the array. 
 Return the updated array to be printed as a single line of space-separated integers.
@@ -28,7 +28,7 @@ function rotLeft(arr, r ) {
   console.log(temp)
   return temp;
 }
-
+// rotate to the Right
 function rotRight(arr, r ) {
   let temp = arr.splice(0)
   for (let i=0; i<r; i++) {
