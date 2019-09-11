@@ -1,5 +1,11 @@
 import React from 'react';
+const persona = {
+  'nombre': 'David',
+  'apellido': 'Portilla',
+  'edad': 30
+}
 
+const mayorEdad = edad => edad > 18
 const Curso = () => (
   <>
   <article className="card">
@@ -8,7 +14,9 @@ const Curso = () => (
     </div>
     <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
       <h3 className="t5 s-mb-2 s-center">
-        Programación orientada a objetos con Go
+        {`Hola me llamo ${persona.nombre} ${persona.apellido}`}
+        <br></br>
+        {mayorEdad(persona.edad)? 'si es mayor' : 'nooo' }
       </h3>
       <div className="s-mb-2 s-main-center">
         <div className="card__teacher s-cross-center">
