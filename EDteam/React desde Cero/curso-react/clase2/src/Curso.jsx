@@ -11,6 +11,7 @@ import React from 'react';
 //   'price' : '50 USD'
 // }
 
+
 // const Curso = props => (
 const Curso = ({title, image, teacher, price}) => (
   <>
