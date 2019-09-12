@@ -33,7 +33,6 @@ const App = () => (
       teacher= "David Portilla Saldaña"
       />
 
-
   </div>
   </>
 )

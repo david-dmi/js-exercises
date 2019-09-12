@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from "prop-types";
+
 // const persona = {
 //   'nombre': 'David',
 //   'apellido': 'Portilla',
@@ -40,5 +42,19 @@ const Curso = ({title, image, teacher, price}) => (
   </article>
   </>
 )
+
+Curso.propTypes = {
+  title: PropTypes.string,
+  image: PropTypes.string,
+  price: PropTypes.string,
+  teacher: PropTypes.string
+}
+
+Curso.defaultProps = {
+  title: 'No se encontró título',
+  image: 'No se encontró imagen',
+  price: 'No se encontró precio',
+  teacher: 'No se encontró profesor',
+}
 
 export default Curso;
