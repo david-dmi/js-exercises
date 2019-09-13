@@ -52,7 +52,7 @@ Curso.propTypes = {
 
 Curso.defaultProps = {
   title: 'No se encontró título',
-  image: 'No se encontró imagen',
+  image: 'https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/aws-i_0.jpg?itok=qqh7AjWK',
   price: 'No se encontró precio',
   teacher: 'No se encontró profesor',
 }

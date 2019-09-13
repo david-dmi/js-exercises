@@ -1,8 +1,28 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
 import './styles/styles.scss';
 import Curso from './Curso'
+
+const cursos = [
+  {
+    'title': 'React desde Cero',
+    'image': 'https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-04/React%20desde%20cero%20%281%29.png',
+    'price': '30',
+    'teacher': 'Dportilla'
+  },
+  {
+    'title': 'TypeScript desde Cero',
+    'image': 'https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-08/typescript.png',
+    'price': '25',
+    'teacher': 'David Portilla'
+  },
+  {
+    'title': 'Node.js desde Cero',
+    'image': 'https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/Node.jpg?itok=SurL1AZa',
+    'price': '35',
+    'teacher': 'DPS'
+  }
+
+]
 
 const App = () => (
   <>
@@ -19,20 +39,13 @@ const App = () => (
     </div>
   </div>
   <div className="ed-grid m-grid-3">
-    <Curso
-      title="React desde Cero"
-      image="https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-04/React%20desde%20cero%20%281%29.png"
-      price="50 USD"
-      teacher= "David Portilla"
-      />
-
-      <Curso
-      title="TypeScript Desde Cero"
-      image="https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-08/typescript.png"
-      price="30 USD"
-      teacher= "David Portilla Saldaña"
-      />
-
+    {
+      cursos.map ( item => <Curso title={item.title}
+                                  image={item.image}
+                                  price={item.price}
+                                  teacher={item.teacher}
+                                  /> )
+    }
   </div>
   </>
 )
