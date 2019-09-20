@@ -1,25 +1,16 @@
 import React from 'react';
 import PropTypes from "prop-types";
-
-// const persona = {
-//   'nombre': 'David',
-//   'apellido': 'Portilla',
-//   'edad': 30
-// }
-
-// const curso = {
-//   'title' : 'react desde cero',
-//   'image' : 'https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-04/React%20desde%20cero%20%281%29.png',
-//   'price' : '50 USD'
-// }
-
+import { Link } from 'react-router-dom'
 
 // const Curso = props => (
-const Curso = ({title, image, teacher, price}) => (
-  <>
-  <article className={`card ${title}`}>
+const Curso = ({ id, title, image, teacher, price }) => (
+
+
+  <article className={`card ${ title }`}>
     <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-      <img src={image} alt={title}/>
+      <Link to={`/cursos/${ id }`}>
+        <img src={image} alt={title} />
+      </Link>
     </div>
     <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
       <h3 className="t5 s-mb-2 s-center">
@@ -29,7 +20,7 @@ const Curso = ({title, image, teacher, price}) => (
         <div className="card__teacher s-cross-center">
           <div className="card__avatar s-mr-1">
             <div className="circle img-container">
-            <img src={image} alt={title}/>
+              <img src={image} alt={title} />
             </div>
           </div>
           <span className="small">{teacher}</span>
@@ -40,7 +31,8 @@ const Curso = ({title, image, teacher, price}) => (
       </div>
     </div>
   </article>
-  </>
+
+
 )
 
 Curso.propTypes = {
@@ -57,4 +49,4 @@ Curso.defaultProps = {
   teacher: 'No se encontró profesor',
 }
 
-export default Curso;
+export default Curso
