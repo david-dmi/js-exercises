@@ -4,13 +4,13 @@ class Formulario extends Component {
   constructor(props) {
     super(props)
 
-    this.state={
-      nombre: 'aaa',
-      correo: ''
+    this.state = {
+      nombre: 'sin nombre',
+      correo: 'sin correo'
     }
 
-    this.cambiarNombre=this.cambiarNombre.bind(this)
-    this.cambiarCorreo=this.cambiarCorreo.bind(this)
+    this.cambiarNombre = this.cambiarNombre.bind(this)
+    this.cambiarCorreo = this.cambiarCorreo.bind(this)
 
   }
 
@@ -52,10 +52,10 @@ class Formulario extends Component {
           </form>
           <div>
 
-            <h3>{ `Hola ${ this.state.nombre }` }</h3>
-            <span>{ `Tu correo es ${ this.state.correo }` }</span>
-          </div>
+            <h3>{ /* `Hola ${ this.state.nombre }` */ }</h3>
+            <span>{ /* `Tu correo es ${ this.state.correo }` */ }</span>
 
+          </div>
 
         </div>
       </>
