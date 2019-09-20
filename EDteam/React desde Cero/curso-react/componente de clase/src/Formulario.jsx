@@ -52,8 +52,8 @@ class Formulario extends Component {
           </form>
           <div>
 
-            <h3>{ /* `Hola ${ this.state.nombre }` */ }</h3>
-            <span>{ /* `Tu correo es ${ this.state.correo }` */ }</span>
+            <h3>{  `Hola ${ this.state.nombre }` }</h3>
+            <span>{ `Tu correo es ${ this.state.correo }` }</span>
 
           </div>
 
