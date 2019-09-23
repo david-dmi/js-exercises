@@ -1,26 +1,26 @@
 import React from 'react';
-import Curso from './Curso'
+import CourseCard from '../Molecules/CourseCard'
 
-const cursos = [
+const courses = [
   {
     'id': 1,
-    'title': 'react desde cero',
+    'title': 'React desde cero',
     'image': 'https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-04/React%20desde%20cero%20%281%29.png',
-    'price': '50 USD',
+    'price': '38 USD',
     'teacher': 'dportilla'
   },
   {
     'id': 2,
-    'title': 'react desde cero',
-    'image': 'https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-04/React%20desde%20cero%20%281%29.png',
-    'price': '50 USD',
+    'title': 'Flutter Desde Cero',
+    'image': 'https://drupal.ed.team/sites/default/files/styles/medium/public/imagenes-cdn-edteam/2018-12/Flutter.png?itok=MpF412ML',
+    'price': '32 USD',
     'teacher': 'dportilla'
   },
   {
     'id': 3,
-    'title': 'react desde cero',
-    'image': 'https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-04/React%20desde%20cero%20%281%29.png',
-    'price': '50 USD',
+    'title': 'Node desde cero',
+    'image': 'https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/Node.jpg?itok=SurL1AZa',
+    'price': '41 USD',
     'teacher': 'dportilla'
   },
 ]
@@ -29,8 +29,8 @@ const CourseGrid = () => (
 
   <div className="ed-grid">
     <div className="ed-grid m-grid-3">
-      { cursos.map(c => (
-        <Curso
+      { courses.map(c => (
+        <CourseCard
           key={ c.id }
           id={ c.id }
           title={ c.title }

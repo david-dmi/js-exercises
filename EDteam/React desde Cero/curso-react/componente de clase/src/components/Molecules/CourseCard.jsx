@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from 'react-router-dom'
 
 // const Curso = props => (
-const Curso = ({ id, title, image, teacher, price }) => (
-
+const CourseCard = ({ id, title, image, teacher, price }) => (
 
   <article className={`card ${ title }`}>
     <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
@@ -27,26 +26,27 @@ const Curso = ({ id, title, image, teacher, price }) => (
         </div>
       </div>
       <div className="s-main-center">
-        <a className="button--ghost-alert button--tiny" href="/">{price}</a>
+        <Link to={`/cursos/${ id }`} className="button--ghost-alert button--tiny" >
+            {price}
+        </Link>
+
       </div>
     </div>
   </article>
-
-
 )
 
-Curso.propTypes = {
+CourseCard.propTypes = {
   title: PropTypes.string,
   image: PropTypes.string,
   price: PropTypes.string,
   teacher: PropTypes.string
 }
 
-Curso.defaultProps = {
+CourseCard.defaultProps = {
   title: 'No se encontró título',
   image: 'https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/aws-i_0.jpg?itok=qqh7AjWK',
   price: 'No se encontró precio',
   teacher: 'No se encontró profesor',
 }
 
-export default Curso
+export default CourseCard
