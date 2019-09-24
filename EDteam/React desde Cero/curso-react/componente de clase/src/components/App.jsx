@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/styles.scss'
 import Form from './Pages/Form'
 import Course from './Pages/CourseDetail'
-import CourseGrid from './Organisms/CourseGrid'
+import Courses from './Pages/Courses'
 import MainMenu from './Organisms/MainMenu'
 import History from './Pages/History'
 import Home from './Pages/Home'
@@ -15,7 +15,7 @@ const App = () => (
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/cursos/:id" exact component={Course} />
-      <Route path="/cursos" exact component={CourseGrid} />
+      <Route path="/cursos" exact component={Courses} />
       <Route path="/historial/:valor" exact component={History} />
       <Route path="/historial" exact component={History} />
       <Route path="/usuarios" exact component={Users} />
