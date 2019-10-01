@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/styles.scss'
 import Form from './Pages/Form'
-import Course from './Pages/CourseDetail'
+import Course from './Pages/Course'
 import Courses from './Pages/Courses'
 import MainMenu from './Organisms/MainMenu'
 import History from './Pages/History'
