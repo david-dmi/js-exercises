@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Axios from 'axios'
+import axios from 'axios'
 import CourseGrid from '../Organisms/CourseGrid'
 
 class Courses extends Component {
@@ -13,7 +13,7 @@ class Courses extends Component {
   }
 
   componentDidMount() {
-    Axios.get('http://my-json-server.typicode.com/david-portilla/json-db/cursos')
+    axios.get('http://my-json-server.typicode.com/david-portilla/json-db/cursos')
       .then(res =>
         // console.log(res.data)
         this.setState({
