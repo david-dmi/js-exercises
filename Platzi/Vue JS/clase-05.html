@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue.js</title>
+</head>
+<body>
+  <div id="app">
+      <pre>manejo de eventos</pre>
+      <br>
+      <h1>Contador esta en {{contador}}</h1>
+      <button @click="sumar">sumar 1</button>
+      <button @click="restar">restar 1</button>
+      <br>
+      <button v-on:click="contador += 1">Add 1</button>
+      <button v-on:click="contador -= 1">Remove 1</button>
+
+      <!-- <input type="text" name="nombre" v-model="nombre" placeholder="ingresar nombre">
+      <input type="text" name="apellido" v-model="apellido" placeholder="ingresar apellido">
+      <p>Tu nombre es: {{nombre | uppercase }}</p>
+      <p>Tu apellido es: {{apellido | capitalize }}</p>
+
+      <form v-on:submit.prevent="submit" action="" method="post">
+        <h2>¿Cuales son tus curso favoritos?</h2>
+        <input v-model="cursos" type="checkbox" id="vue" value="vue">
+        <label for="vue"> Curso de vue.js</label>
+        <input v-model="cursos" type="checkbox" id="seo" value="seo">
+        <label for="seo"> Curso de SEO</label>
+        <input v-model="cursos" type="checkbox" id="react" value="react">
+        <label for="react"> Curso de react.js</label>
+        <button type="submit">Enviar</button>
+      </form> -->
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script text="javascript">
+    let app = new Vue({
+      el: document.getElementById('app'),
+      data: {
+        contador: 0,
+      },
+      filters: {
+        uppercase: function (str) {
+          return str.toUpperCase()
+        },
+        lowercase: function (str) {
+          return str.toLowerCase()
+        },
+        capitalize: function(str){
+          c = str.trim().charAt(0);
+          return str.replace(c,c.toUpperCase());
+        }
+      },
+      methods: {
+        sumar: function () {
+          this.contador++
+        },
+        restar: function () {
+          this.contador--
+        }
+      }
+    })
+  </script>
+</body>
+</html>

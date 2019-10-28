@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue.js</title>
+</head>
+<body>
+  <div id="app">
+
+      <!-- <h1>{{titulo | uppercase }}</h1>
+      <h2>{{subtitulo | lowercase | capitalize }}</h2>
+      Hola {{ nombre }}
+      <a :href="url" target="_blank">{{pagina}}</a> -->
+      <!-- <button v-on:click="sumar">sumar 1</button>
+      <button v-on:click="restar">restar 1</button>
+      Contador esta en {{contador}} -->
+      <input type="text" name="nombre" v-model="nombre" placeholder="ingresar nombre">
+      <input type="text" name="apellido" v-model="apellido" placeholder="ingresar apellido">
+      <p>Tu nombre es: {{nombre | uppercase }}</p>
+      <p>Tu apellido es: {{apellido | capitalize }}</p>
+
+      <form v-on:submit.prevent="submit" action="" method="post">
+        <h2>¿Cuales son tus curso favoritos?</h2>
+        <input v-model="cursos" type="checkbox" id="vue" value="vue">
+        <label for="vue"> Curso de vue.js</label>
+        <input v-model="cursos" type="checkbox" id="seo" value="seo">
+        <label for="seo"> Curso de SEO</label>
+        <input v-model="cursos" type="checkbox" id="react" value="react">
+        <label for="react"> Curso de react.js</label>
+        <button type="submit">Enviar</button>
+      </form>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script text="javascript">
+    let app = new Vue({
+      el: document.getElementById('app'),
+      data: {
+        nombre: '',
+        apellido:'',
+        pagina: 'Ir a google',
+        url: 'https://google.com',
+        mostrar: true,
+        titulo: 'hola ve',
+        subtitulo: 'esto es vue.js',
+        contador: 0,
+        cursos: []
+      },
+      filters: {
+        uppercase: function (str) {
+          return str.toUpperCase()
+        },
+        lowercase: function (str) {
+          return str.toLowerCase()
+        },
+        capitalize: function(str){
+          c = str.trim().charAt(0);
+          return str.replace(c,c.toUpperCase());
+        }
+      },
+      methods: {
+        sumar: function () {
+          this.contador++
+        },
+        restar: function () {
+          this.contador--
+        },
+        submit: function () {
+          console.log('submit function')
+          console.log(this.cursos)
+        }
+      }
+    })
+  </script>
+</body>
+</html>
