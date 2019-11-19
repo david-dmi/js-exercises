@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BadgeNew from './pages/BadgeNew'
-// import Badge from './components/Badge'
+import BadgePage from './pages/BadgePage'
 import 'bootstrap/dist/css/bootstrap.css'
 import './global.css'
 
 const container = document.getElementById('app');
 
-ReactDOM.render(<BadgeNew />, container);
+ReactDOM.render(<BadgePage />, container);
