@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from '../components/NavBar';
 import BadgestList from '../components/BadgesList';
 import confLogo from '../images/badge-header.svg'
@@ -50,7 +51,7 @@ export default class Badges extends Component {
         </div>
         <div className="Badges__container">
           <div className="Badges__buttons">
-            <a className="btn btn-primary" href="/badges/new">Add new badges</a>
+            <Link to="/badges/new" className="btn btn-primary">Add new badges </Link>
           </div>
           <div className="Badges__list">
             <div className="Badges__container">
@@ -59,7 +60,7 @@ export default class Badges extends Component {
           </div>
 
         </div>
-      </div >
+      </div>
     )
   }
 }
