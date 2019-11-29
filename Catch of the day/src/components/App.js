@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 import Header from "./Header";
 import Inventory from "./Inventory";
@@ -12,7 +12,7 @@ export default class App extends Component {
         {/* App.js */ }
         <div className="catch-of-the-day">
           <div className="menu">
-            <Header />
+            <Header tagline="Fresh SeaFood Market"/>
             <Fish />
             <Fish />
             <Fish />
