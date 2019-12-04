@@ -13,9 +13,9 @@ export default class App extends Component {
   }
 
   addFish = fish => {
-    const fishesForm = { ...this.state.fishes }
-    fishesForm[ `fish${ Date.now() }` ] = fish
-    this.setState({ fishesForm })
+    const fishes = { ...this.state.fishes }
+    fishes[ `fish${ Date.now() }` ] = fish
+    this.setState({ fishes })
   }
 
   loadSampleFishes = () => {
@@ -46,7 +46,7 @@ export default class App extends Component {
               ) }
             </ul>
           </div>
-          <Order></Order>
+          <Order fishes={ this.state.fishes } order={ this.state.order } />
           <Inventory
             addFish={ this.addFish }
             loadSampleFishes={ this.loadSampleFishes } />
