@@ -15,10 +15,20 @@ export default class App extends Component {
 
   componentDidMount () {
     const { params } = this.props.match
+    // get the last localstorage item from previous session
+    const localStorageRef = localStorage.getItem(params.storedId)
+    if (localStorageRef) {
+      this.setState({ order: JSON.parse(localStorageRef) })
+    }
     this.ref = base.syncState(`${ params.storedId }/fishes`, {
       context: this,
       state: 'fishes'
     })
+  }
+
+  componentDidUpdate () {
+    const nameStore = this.props.match.params.storedId
+    localStorage.setItem(nameStore, JSON.stringify(this.state.order))
   }
 
   componentWillUnmount () {

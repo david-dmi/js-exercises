@@ -4,8 +4,10 @@ export default class Order extends Component {
   renderOrder = key => {
     const fish = this.props.fishes[ key ]
     const count = this.props.order[ key ]
-    const isAvailable = fish.status === 'available'
-
+    const isAvailable = fish && fish.status === 'available'
+    // check if fish was loaded
+    if(!fish) return null
+    // if fish is sold out
     if (!isAvailable) {
       return <li> Sorry { fish ? fish.name : 'fish' } is no longer available </li>
     }
