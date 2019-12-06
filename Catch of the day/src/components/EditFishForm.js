@@ -8,6 +8,14 @@ export default class EditFishForm extends Component {
     }
     this.props.updateFish(this.props.index, updatedFish)
   }
+
+  // handleDeleteFish = event => {
+  //   const fishesToDelete = {
+  //     ...this.props.fish,
+  //   }
+  //   this.props.deleteFish(this.props.index, fishesToDelete)
+  // }
+
   render () {
     return (
       <div className='fish-edit'>
@@ -19,6 +27,8 @@ export default class EditFishForm extends Component {
         </select>
         <textarea name="desc" onChange={ this.handleChange } value={ this.props.fish.desc }></textarea>
         <input type="text" name="image" onChange={ this.handleChange } value={ this.props.fish.image } />
+        {/* <button onClick={ this.handleDeleteFish }> Remove Fish</button> */ }
+        <button onClick={ () => this.props.deleteFish(this.props.index) }> Remove Fish</button>
       </div>
     )
   }

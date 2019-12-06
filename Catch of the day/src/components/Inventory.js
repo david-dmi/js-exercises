@@ -12,7 +12,9 @@ export default class Inventory extends Component {
             key={ key }
             index={ key }
             fish={ this.props.fishes[ key ] }
-            updateFish={ this.props.updateFish } />
+            updateFish={ this.props.updateFish }
+            deleteFish={ this.props.deleteFish }
+          />
         ) }
         <AddFish addFish={ this.props.addFish } />
         <button onClick={ this.props.loadSampleFishes }>Load sample fishes</button>
