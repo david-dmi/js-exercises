@@ -36,7 +36,6 @@
           transform: translateY(100%);
 }
 .count-enter.count-enter-active {
-  background: #ff0;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -49,9 +48,9 @@
   left: 0;
 }
 .count-exit.count-exit-active {
-  background: #008000;
-  -webkit-transform: translateY(-100%) scale(1.1);
-          transform: translateY(-100%) scale(1.1);
+  -webkit-transform: translateY(-100%) scale(0.8);
+          transform: translateY(-100%) scale(0.8);
+  opacity: 0;
 }
 @font-face {
   font-family: "haymakerregular";
