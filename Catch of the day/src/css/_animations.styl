@@ -5,6 +5,9 @@
   appear Must set transitionAppear={true} on animation component
 */
 
+.order
+  position relative
+
 .order-enter
   transform: translateX(-120%)
   transition 0.5s
@@ -22,9 +25,11 @@
     transform: translateX(120%)
     padding: 0
 
+.count
+  position relative
 
 .count-enter
-  background: red
+  // background: red
   transition .5s
   transform translateY(100%)
   &.count-enter-active
@@ -32,12 +37,12 @@
     transform translateY(0)
 
 .count-exit
-  background: black
+  // background: black
   transform translateY(0)
   transition .5s
   position absolute
   left 0
-  bottom 0
+  // bottom 0
   &.count-exit-active
     background green
-    transform translateY(-100%) scale(3)
+    transform translateY(-100%) scale(1.1)
