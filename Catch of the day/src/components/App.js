@@ -103,6 +103,7 @@ export default class App extends Component {
             addFish={ this.addFish }
             updateFish={ this.updateFish }
             deleteFish={ this.deleteFish }
+            storeId={ this.props.match.params.storedId }
           />
         </div>
       </>
