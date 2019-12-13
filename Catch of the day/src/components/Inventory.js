@@ -29,7 +29,7 @@ export default class Inventory extends Component {
 
   authHandler = async (authData) => {
     const store = await base.fetch(this.props.storeId, { context: this })
-    console.log('store', store)
+    // console.log('store', store)
     if (!store.owner) {
       await base.post(`${ this.props.storeId }/owner`, {
         data: authData.user.uid
@@ -39,18 +39,18 @@ export default class Inventory extends Component {
       uid: authData.user.uid,
       owner: store.owner || authData.user.uid
     })
-    console.log('authData: ', authData.user.uid)
+    // console.log('authData: ', authData.user.uid)
   }
 
   authenticate = provider => {
-    console.log('provider: ', provider)
-    // const authProvider = new firebase.auth.GithubAuthProvider()
+    // console.log('provider: ', provider)
+    // const authProvider = new firebase.auth.FacebookAuthProvider()
     const authProvider = new firebase.auth[ `${ provider }AuthProvider` ]()
-    firebaseApp.auth().signInWithPopup(authProvider).then(this.authHandler)
+    firebaseApp.auth().signInWithPopup(authProvider).then(this.authHandler).catch(error => console.log('error.code', error.code))
   }
 
   logout = async () => {
-    console.log('logging out')
+    // console.log('logging out')
     await firebase.auth().signOut()
     this.setState({ uid: null })
   }
@@ -62,7 +62,7 @@ export default class Inventory extends Component {
       return <Login authenticate={ this.authenticate } />
     }
     // check if they are NOT the owner of the store
-    if (this.state.uid != this.state.owner) {
+    if (this.state.uid !== this.state.owner) {
       return <div>
         <p> <strong>Sorry you are not the owner!</strong> You are not allow to handle this inventory</p>
         { logout }
